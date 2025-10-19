@@ -11,9 +11,9 @@ h1 {
     flex-wrap:wrap; 
 } 
 .project {
-    width: 30%;
+    width: 20%;
     margin: 10px;
     padding: 20px 10px;
-    background: white; /* pick a color */
+    background: rgb(235, 222, 222);
     border-radius: 25%;
 }
