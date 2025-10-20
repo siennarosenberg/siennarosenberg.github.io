@@ -17,3 +17,11 @@ h1 {
     background: rgb(235, 222, 222);
     border-radius: 25%;
 }
+.project img{
+    width: 480px;
+    height: 270px;
+    margin: 10px;
+    border: 2px solid rgb(195, 221, 234);
+    display: block;
+    margin: auto;
+}
