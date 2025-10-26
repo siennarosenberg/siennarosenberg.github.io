@@ -21,13 +21,13 @@ h1 {
     width: 480px;
     height: 270px;
     margin: 10px;
-    border: 2px solid rgb(195, 221, 234);
+    border: 2px solid rgb(201, 107, 81);
     display: block;
     margin: auto;
 }
 a { /* change the appearance of ALL links */
  text-decoration: none;
- color: rgb(216, 148, 133);
+ color: rgb(201, 107, 81);
 }
 .project p { /* change the appearance of paragraph tags inside .project divs */
  text-align: center;
