@@ -16,6 +16,7 @@ h2 {
     color: #000000;
     text-align: center;
     font-size: 15px;
+    font-weight: normal;
 }
 
 <!--for heading one, education, relevant course work, etc-->
@@ -24,4 +25,5 @@ h3 {
     text-align: left;
     font-size: 16px;
     text-decoration: underline;
+    font-weight: normal;
 }
