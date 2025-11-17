@@ -6,6 +6,10 @@ h1 {
     color: #353d4d;
     text-align: center;
 }
+h3 {
+    color: rgb(201, 107, 81);
+    text-align: center;
+}
 .projects {
     display:flex;
     flex-wrap:wrap; 
