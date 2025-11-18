@@ -14,7 +14,7 @@ h3 {
     display:flex;
     flex-wrap:wrap; 
 } 
-.projects h2{
+.projects h2 {
     width: 100%;
 }
 .project {
@@ -24,13 +24,17 @@ h3 {
     background: rgb(235, 222, 222);
     border-radius: 10%;
 }
+.project h3{
+    margin-left: 50px;
+}
 .project img{
     width: 240px;
     height: 135px;
     margin: 10px;
     border: 2px solid rgb(201, 107, 81);
-    display: flex;
+    display: block;
     margin: auto;
+    text-align: center;
 }
 a { /* change the appearance of ALL links */
  text-decoration: none;
