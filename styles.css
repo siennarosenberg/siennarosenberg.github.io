@@ -18,14 +18,15 @@ h3 {
     width: 100%;
 }
 .project {
-    width: 15%;
+    width: 20%;
     margin: 5px;
     padding: 10px 8px;
     background: rgb(235, 222, 222);
     border-radius: 10%;
 }
 .project h3{
-    margin-left: 50px;
+    margin-left: 100px;
+    margin-right: 100px
 }
 .project img{
     width: 240px;
