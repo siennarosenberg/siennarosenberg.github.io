@@ -14,6 +14,9 @@ h3 {
     display:flex;
     flex-wrap:wrap; 
 } 
+.projects h2{
+    width: 100%;
+}
 .project {
     width: 15%;
     margin: 5px;
