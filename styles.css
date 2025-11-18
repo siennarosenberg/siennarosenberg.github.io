@@ -17,13 +17,13 @@ h3 {
 .project {
     width: 15%;
     margin: 5px;
-    padding: 10px 5px;
+    padding: 10px 8px;
     background: rgb(235, 222, 222);
     border-radius: 10%;
 }
 .project img{
-    width: 480px;
-    height: 270px;
+    width: 240px;
+    height: 135px;
     margin: 10px;
     border: 2px solid rgb(201, 107, 81);
     display: flex;
