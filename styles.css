@@ -26,7 +26,7 @@ h3 {
     height: 270px;
     margin: 10px;
     border: 2px solid rgb(201, 107, 81);
-    display: block;
+    display: flex;
     margin: auto;
 }
 a { /* change the appearance of ALL links */
