@@ -3,130 +3,324 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resume</title>
-  <link rel="stylesheet" href="resume_style.css" >
+  <title>Sienna Rosenberg — Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #ffffff;
+      color: #111111;
+      font-size: 14px;
+      line-height: 1.6;
+      padding: 2.5rem 2rem;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    /* HEADER */
+    .header {
+      text-align: center;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1.5px solid #111111;
+    }
+
+    .header h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2rem;
+      color: #111111;
+      margin-bottom: 0.4rem;
+    }
+
+    .contact {
+      font-size: 0.8rem;
+      color: #555555;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.25rem 1rem;
+    }
+
+    .contact a {
+      color: #111111;
+      text-decoration: none;
+    }
+
+    .contact a:hover { text-decoration: underline; }
+
+    /* SECTIONS */
+    .section {
+      margin-bottom: 1.5rem;
+    }
+
+    .section h2 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #111111;
+      border-bottom: 0.5px solid #cccccc;
+      padding-bottom: 0.3rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .entry {
+      margin-bottom: 0.9rem;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+    }
+
+    .entry-title {
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: #111111;
+    }
+
+    .entry-date {
+      font-size: 0.78rem;
+      color: #555555;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .entry-sub {
+      font-size: 0.82rem;
+      color: #444444;
+      font-style: italic;
+      margin-bottom: 0.3rem;
+    }
+
+    .entry-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 0.15rem 0.5rem;
+      border-radius: 100px;
+      background: #f0f0f0;
+      color: #111111;
+      margin-left: 0.5rem;
+      font-style: normal;
+    }
+
+    ul {
+      padding-left: 1.1rem;
+      margin-top: 0.25rem;
+    }
+
+    ul li {
+      font-size: 0.83rem;
+      color: #222222;
+      margin-bottom: 0.2rem;
+    }
+
+    /* SKILLS */
+    .skills-row {
+      font-size: 0.83rem;
+      color: #222222;
+      margin-bottom: 0.3rem;
+    }
+
+    .skills-row strong {
+      color: #111111;
+      font-weight: 500;
+    }
+
+    /* COURSEWORK */
+    .coursework {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .course-tag {
+      font-size: 0.75rem;
+      padding: 0.2rem 0.65rem;
+      border-radius: 100px;
+      background: #f0f0f0;
+      color: #111111;
+      font-weight: 500;
+    }
+
+    @media print {
+      body { background: white; padding: 1rem; }
+    }
+  </style>
 </head>
 <body>
+
   <div class="header">
     <h1>Sienna Rosenberg</h1>
     <div class="contact">
-      <p style="text-align: center;">Email: siennarosenberg72@gmail.com | Location: Richmond, VA</p>
-    </div>
-    <hr>
-  </div>
-
-  <div class="section">
-    <h2>EDUCATION</h2>
-    <div class="section-content">
-        <div style="display: flex; justify-content: space-between;">
-          <span><strong>University of South Carolina - Columbia, SC</strong><br></span>
-          <span><strong>May 2029</strong></span>
-        </div>
-        <div style="display: flex; justify-content: space-between;">
-          <span><em>Bachelor of Science in Computer Science, Minor in Spanish</em><br><br></span>
-          <span>GPA: N/A</span>
-        </div>
-        <div style="display: flex; justify-content: space-between;">
-          <span><strong>Midlothian High School - Midlothian, VA</strong><br></span>
-          <span><strong>May 2025</strong></span>
-        </div>
-        <div style="display: flex; justify-content: space-between;">
-          <span><em>International Baccalaureate Programme Graduate</em><br></span>
-          <span>GPA: 4.0</span>
-        </div>
-      Honors and Awards: National Merit Scholarship Program, Honorific Mention for the National Spanish Exam, IB Spanish Award, IB Psychology Award, Mathematics Achievement<br>
+      <span><a href="mailto:siennarosenberg72@gmail.com">siennarosenberg72@gmail.com</a></span>
+      <span>·</span>
+      <span>(804) 389-8247</span>
+      <span>·</span>
+      <span><a href="https://linkedin.com/in/siennarosenberg" target="_blank">linkedin.com/in/siennarosenberg</a></span>
+      <span>·</span>
+      <span><a href="https://siennarosenberg.github.io" target="_blank">siennarosenberg.github.io</a></span>
     </div>
   </div>
 
+  <!-- EDUCATION -->
   <div class="section">
-    <h2>RELEVANT COURSE WORK</h2>
-    <div class="section-content">
-      <div style="display: flex; justify-content: center; gap: 200px">
-        <span>Algorithmic Design</span>
-        <span>Computer Science</span>
-        <span>Computing in the Modern World</span>
+    <h2>Education</h2>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">University of South Carolina — Columbia, SC</span>
+        <span class="entry-date">Expected May 2028</span>
       </div>
+      <div class="entry-sub">Bachelor of Science in Computer Science, Minor in Spanish &nbsp;·&nbsp; GPA: 3.875</div>
     </div>
-  </div>
-  <br>
 
-<div class="section">
-    <h2>PROFESSIONAL EXPERIENCE</h2>
-        <div style="display: flex; justify-content: space-between;">
-          <span><strong>Mathnasium – Midlothian, VA</strong><br></span>
-          <span><strong>August 2024– August 2025</strong></span>
-        </div>
-        <div style="display: flex; justify-content: space-between;">
-          <span><em>Team Captain, Instructor</em><br></span>
-        </div>
-    <ul>
-        <li>Tutored kids ages 5 to 18 in all different kinds of math.</li>
-        <li>Led and helped direct our instructing team and made sure to keep up the correct ratio of students to instructors.</li>
-        <li>Kept instructors up-to-date on any upcoming changes or events.</li>
-        <li>Helped train new instructors and new team captains.</li>
-        <li>Solved problems with students and learned how to work with certain students better, depending on their learning styles and any struggles/ lack of motivation they may have.</li>
-    </ul>
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Midlothian High School — Midlothian, VA</span>
+        <span class="entry-date">May 2025</span>
+      </div>
+      <div class="entry-sub">International Baccalaureate Programme Graduate &nbsp;·&nbsp; GPA: 4.0</div>
+      <ul>
+        <li>Honors & Awards: National Merit Scholarship Program, National Spanish Exam Honorific Mention, IB Spanish Award, IB Psychology Award, Mathematics Achievement</li>
+      </ul>
     </div>
   </div>
 
-<div class="section">
-    <h2>CLASSROOM EXPERIENCE</h2>
-        <div style="display: flex; justify-content: space-between;">
-          <span><strong>AP Computer Science Create Task</strong><br></span>
-          <span><strong>Spring 2023</strong></span>
-        </div>
-        <div style="display: flex; justify-content: space-between;">
-          <span><em>Creator</em><br></span>
-        </div>
-    <ul>
-        <li>Created a working app in Java, including loops, if-statements, array manipulation, and more.</li>
-    </ul>
+  <!-- RELEVANT COURSEWORK -->
+  <div class="section">
+    <h2>Relevant Coursework</h2>
+    <div class="coursework">
+      <span class="course-tag">Algorithmic Design I</span>
+      <span class="course-tag">Computing in the Modern World</span>
+      <span class="course-tag">Computer Science</span>
+      <span class="course-tag">Spanish 302</span>
     </div>
   </div>
 
-<div class="section">
-    <h2>LEADERSHIP EXPERIENCE</h2>
-        <div style="display: flex; justify-content: space-between;">
-          <span><strong>Earth Club</strong><br></span>
-          <span><strong>August 2023 – May 2025</strong></span>
-        </div>
-        <div style="display: flex; justify-content: space-between;">
-          <span><em>President</em><br></span>
-        </div>
-    <ul>
-        <li>Planned meetings, discussed future opportunities, developed ideas for meetings, and found ways in which we can help the environment.</li>
-    </ul>
+  <!-- PROJECTS -->
+  <div class="section">
+    <h2>Projects</h2>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Predictive Modeling System &nbsp;<span class="entry-badge">🏆 1st Place — Asset Hackathon</span></span>
+        <span class="entry-date">April 2026</span>
+      </div>
+      <ul>
+        <li>Built a custom interface model using Gaussian Process Regression to predict missing values in incomplete datasets.</li>
+        <li>Designed a system to generalize from existing data and improve prediction accuracy on sparse inputs.</li>
+        <li>Collaborated in a team environment to develop and present a working solution within a limited timeframe.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Personal Portfolio Website</span>
+        <span class="entry-date">Fall 2025</span>
+      </div>
+      <div class="entry-sub">Computing in the Modern World &nbsp;·&nbsp; Creator</div>
+      <ul>
+        <li>Developed and iteratively improved a personal portfolio site using HTML and CSS, hosted on GitHub Pages: <a href="https://siennarosenberg.github.io" target="_blank">siennarosenberg.github.io</a></li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">AP Computer Science Principles Create Task</span>
+        <span class="entry-date">Spring 2023</span>
+      </div>
+      <ul>
+        <li>Created an interactive JavaScript application using Code.org's App Lab, incorporating loops, conditionals, and array manipulation.</li>
+      </ul>
     </div>
   </div>
 
-<div class="section">
-    <h2>VOLUNTEERING EXPERIENCE</h2>
-        <div style="display: flex; justify-content: space-between;">
-          <span><strong>Chesterfield Food Bank</strong><br></span>
-          <span><strong>December 2023 – Present</strong></span>
-        </div>
-    <ul>
-        <li>Volunteered often at the food bank (runs on a monthly basis).</li>
-        <li>Do several tasks, including loading carts with food, distributing food, keeping track of the amount left of each food item, loading cars with food, etc.</li>
-        <li>Have had several opportunities to speak in Spanish with families getting food.</li>
-    </ul>
-        <div style="display: flex; justify-content: space-between;">
-          <span><strong>Richmond Society for the Prevention of Cruelty to Animals</strong><br></span>
-          <span><strong>March 2023 – Present</strong></span>
-        </div>
-    <ul>
-        <li>Volunteer for the Richmond SPCA</li>
-        <li>A society with the goal of promoting the health and happiness of animals.</li>
-        <li>Handle a variety of tasks, maintain cleanliness and organization within the shelter environment.</li>
-    </ul>
+  <!-- PROFESSIONAL EXPERIENCE -->
+  <div class="section">
+    <h2>Professional Experience</h2>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Mathnasium — Midlothian, VA</span>
+        <span class="entry-date">Aug 2024 – Aug 2025</span>
+      </div>
+      <div class="entry-sub">Team Captain, Instructor</div>
+      <ul>
+        <li>Tutored up to four students per hour, ages 5–18, across all levels of mathematics.</li>
+        <li>Led the instructing team, maintained student-to-instructor ratios, and kept staff informed of upcoming changes.</li>
+        <li>Trained new instructors and team captains; adapted teaching strategies to individual learning styles and challenges.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Walgreens — Midlothian, VA</span>
+        <span class="entry-date">Dec 2025 – Jan 2026</span>
+      </div>
+      <div class="entry-sub">Customer Service Associate (Temporary)</div>
+      <ul>
+        <li>Stocked shelves, operated register, assisted customers, worked in photo, and fulfilled pickup and shipping orders.</li>
+      </ul>
     </div>
   </div>
 
-<div class="section">
-    <h2>SKILLS</h2>
-    <div class="section-content">
-      <strong>Programming Languages</strong>: Java (Intermediate), Python (Intermediate)<br>
-      <strong>Languages</strong>: English, Spanish (Intermediate)<br>
-      <strong>Certifications</strong>: Python Basics: Selection and Iteration, Virginia Space Coast Scholars
+  <!-- LEADERSHIP -->
+  <div class="section">
+    <h2>Leadership Experience</h2>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Earth Club — Midlothian High School</span>
+        <span class="entry-date">Aug 2023 – May 2025</span>
+      </div>
+      <div class="entry-sub">President</div>
+      <ul>
+        <li>Planned meetings, developed initiatives, and led efforts to promote environmental awareness within the school community.</li>
+      </ul>
     </div>
   </div>
+
+  <!-- VOLUNTEERING -->
+  <div class="section">
+    <h2>Volunteering Experience</h2>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Chesterfield Food Bank</span>
+        <span class="entry-date">Dec 2023 – Present</span>
+      </div>
+      <ul>
+        <li>Monthly volunteer — distributes food, manages inventory tracking, and loads vehicles for families in need.</li>
+        <li>Regularly assists Spanish-speaking families, applying conversational Spanish skills in a community setting.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Richmond SPCA</span>
+        <span class="entry-date">Mar 2023 – Present</span>
+      </div>
+      <ul>
+        <li>Supports animal welfare operations, handles a variety of shelter tasks, and maintains cleanliness and organization.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section">
+    <h2>Skills</h2>
+    <div class="skills-row"><strong>Programming Languages:</strong> Java, Python (Intermediate), HTML (Intermediate), CSS (Intermediate)</div>
+    <div class="skills-row"><strong>AI & Data:</strong> Large Language Models (LLMs), Prompt Engineering, Generative AI, Anthropic Claude</div>
+    <div class="skills-row"><strong>Languages:</strong> English (Native), Spanish (B2)</div>
+    <div class="skills-row"><strong>Certifications:</strong> Python Basics: Selection and Iteration, Virginia Space Coast Scholars</div>
+  </div>
+
+</body>
+</html>
