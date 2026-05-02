@@ -1,84 +1,616 @@
-
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>CSCE Project</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-            <h1>Sienna Rosenberg</h1>
-            <div class="about">
-                <h2>About Me</h2>
-                <p>Mission Statement: My goal is to combine my curiosity and technical skills to develop computing solutions that promote innovation, equity, and meaningful global connection.</p>
-            </div>
-            <div class="skills">
-                <h2>Skills</h2>
-                <span>
-                    My resume: <a href="files/resume11.25.pdf">PDF version</a>
-                    | <a href="resume.html">HTML version</a>
-                </span>
-            </div>
-            <div class="projects">
-                <h2>Highlighted Projects</h2>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sienna Rosenberg</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-                <!--   Problem Statement Assignment-->
-                   <section class="project">
-                    <a href="files/statement.pdf">
-                        <h3>Problem Statement</h3>
-                    </a>
-                    <a href="files/statement.pdf">
-                        <img src="images/problem.png">
-                    </a>
-                    <p>Students often struggle with not being able to remember how many retail swipes they’ve spent every week which can result in them thinking they have more retail swipes left than they have, or not spending all of their swipes for a week.</p>
-                </section>
+    :root {
+      --cream: #faf8f4;
+      --ink: #1a1814;
+      --muted: #6b6760;
+      --accent: #2d5a3d;
+      --accent-light: #eaf2ec;
+      --border: #e4e0d8;
+      --white: #ffffff;
+    }
 
-                <!--Affinity Diagram Assignment -->
-                <section class="project">
-                    <a href="files/Affinity_DOC.pdf">
-                        <h3>Affinity Diagram</h3>
-                    </a>
-                    <a href="files/Affinity_DOC.pdf">
-                        <img src="images/Affinity_IMG.png">
-                    </a>
-                    <p>My affinity diagram</p>
-                </section>
+    html { scroll-behavior: smooth; }
 
-                <!--Sketches Assignment-->
-                <section class="project">
-                    <a href="files/Sketches_DOC.pdf"><h3>Sketches</h3></a>
-                    <a href="files/Sketches_DOC.pdf"><img src="images/Sketches_IMG.png"></a>
-                    <p>My retail swipe tracker app</p>
-                </section>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.7;
+    }
 
-                <!--Repositories Assignment: CSCE145-->
-                <section class="project">
-                    <a href="https://github.com/siennarosenberg/CSCE145">
-                        <h3>CSCE 145</h3>
-                    </a>
-                    <a href="https://github.com/siennarosenberg/CSCE145">
-                        <img src="images/CSCE145.png">
-                    </a>
-                <p>String, loops, and array labs from Algorithmic Design I</p>
-                </section>
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: rgba(250, 248, 244, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      z-index: 100;
+      padding: 0 2rem;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-                <!--Repositories Assignment: APCSP-->
-                <section class="project">
-                    <a href="https://github.com/siennarosenberg/APCSP">
-                        <h3>AP CSP</h3>
-                    </a>
-                    <a href="https://github.com/siennarosenberg/APCSP">
-                        <img src="images/APCSP.png">
-                    </a>
-                    <p>My AP Computer Science Principles Create Task that was created using Code.org. This JavaScript runs using Code.org's App Lab.</p>
-                </section>
+    .nav-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.1rem;
+      color: var(--ink);
+      text-decoration: none;
+    }
 
-            </div>
-            <div class="contact">
-                <h2>Contact Me</h2>
-                <p>siennarosenberg72@gmail.com
-                </p>
-            </div>
-            <br><br>
-    </body>
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--ink); }
+
+    /* SECTIONS */
+    section {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 5rem 2rem;
+    }
+
+    section + section {
+      border-top: 1px solid var(--border);
+    }
+
+    /* HERO */
+    #hero {
+      padding-top: 9rem;
+      padding-bottom: 5rem;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.8rem, 6vw, 4rem);
+      line-height: 1.1;
+      color: var(--ink);
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 520px;
+      margin-bottom: 2rem;
+    }
+
+    .hero-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.6rem 1.4rem;
+      border-radius: 100px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-primary:hover { background: #234a30; }
+
+    .btn-outline {
+      border: 1px solid var(--border);
+      color: var(--ink);
+      background: transparent;
+    }
+
+    .btn-outline:hover { background: var(--white); border-color: #ccc; }
+
+    /* SECTION HEADINGS */
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.75rem;
+      color: var(--ink);
+      margin-bottom: 1.75rem;
+    }
+
+    /* ABOUT */
+    .about-text {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 620px;
+    }
+
+    .about-text strong { color: var(--ink); font-weight: 500; }
+
+    /* SKILLS */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .skill-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+    }
+
+    .skill-card-title {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .tag {
+      font-size: 0.8rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 100px;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .tag-gray {
+      background: #f0ede8;
+      color: var(--muted);
+    }
+
+    /* PROJECTS */
+    .projects-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .project-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      transition: border-color 0.2s, transform 0.2s;
+      position: relative;
+    }
+
+    .project-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .project-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.1rem;
+      color: var(--ink);
+    }
+
+    .project-badge {
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 0.2rem 0.6rem;
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+
+    .badge-winner {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .badge-class {
+      background: var(--accent-light);
+      color: var(--accent);
+    }
+
+    .project-desc {
+      font-size: 0.925rem;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .project-tag {
+      font-size: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 100px;
+      background: #f0ede8;
+      color: var(--muted);
+    }
+
+    .arrow {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      font-size: 1rem;
+      color: var(--border);
+      transition: color 0.2s;
+    }
+
+    .project-card:hover .arrow { color: var(--accent); }
+
+    /* EXPERIENCE */
+    .exp-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .exp-item {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 560px) {
+      .exp-item { grid-template-columns: 1fr; gap: 0.25rem; }
+      nav .nav-links { display: none; }
+    }
+
+    .exp-date {
+      font-size: 0.8rem;
+      color: var(--muted);
+      padding-top: 0.15rem;
+    }
+
+    .exp-role {
+      font-weight: 500;
+      font-size: 0.975rem;
+      color: var(--ink);
+    }
+
+    .exp-org {
+      font-size: 0.875rem;
+      color: var(--accent);
+      margin-bottom: 0.35rem;
+    }
+
+    .exp-desc {
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+
+    /* CONTACT */
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      background: var(--white);
+      transition: all 0.2s;
+    }
+
+    .contact-link:hover {
+      color: var(--ink);
+      border-color: #aaa;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 2.5rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-up {
+      opacity: 0;
+      animation: fadeUp 0.55s ease forwards;
+    }
+
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.22s; }
+    .delay-3 { animation-delay: 0.34s; }
+    .delay-4 { animation-delay: 0.46s; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-name" href="#hero">Sienna Rosenberg</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <p class="hero-eyebrow fade-up">Computer Science · University of South Carolina</p>
+    <h1 class="fade-up delay-1">Sienna<br>Rosenberg</h1>
+    <p class="hero-sub fade-up delay-2">Freshman CS student passionate about AI, data science, and building technology that makes a meaningful difference.</p>
+    <div class="hero-links fade-up delay-3">
+      <a href="https://siennarosenberg.github.io/files/resume11.25.pdf" class="btn btn-primary" target="_blank">View Résumé</a>
+      <a href="#contact" class="btn btn-outline">Get in touch</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <p class="section-label">About</p>
+    <h2>A little about me</h2>
+    <p class="about-text">
+      I'm a freshman at the <strong>University of South Carolina</strong> studying Computer Science with a minor in Spanish, maintaining a 3.875 GPA. I'm drawn to the intersection of AI and real-world problem solving — from building predictive models at hackathons to exploring how large language models can be used to create practical software.<br><br>
+      Outside of code, I tutored students for a year at <strong>Mathnasium</strong> where I learned how much individualized instruction matters, and I volunteer regularly at the Chesterfield Food Bank and Richmond SPCA. I also love that technology can break language barriers — something I get to explore through my Spanish studies.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <p class="section-label">Skills</p>
+    <h2>What I work with</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <p class="skill-card-title">Languages</p>
+        <div class="skill-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Java</span>
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <p class="skill-card-title">AI &amp; Data</p>
+        <div class="skill-tags">
+          <span class="tag">Large Language Models</span>
+          <span class="tag">Prompt Engineering</span>
+          <span class="tag">Predictive Modeling</span>
+          <span class="tag">Data Analysis</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <p class="skill-card-title">Tools &amp; Platforms</p>
+        <div class="skill-tags">
+          <span class="tag">Anthropic Claude</span>
+          <span class="tag">GitHub</span>
+          <span class="tag">Pandas</span>
+          <span class="tag">Generative AI</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <p class="skill-card-title">Soft Skills</p>
+        <div class="skill-tags">
+          <span class="tag tag-gray">Communication</span>
+          <span class="tag tag-gray">Teamwork</span>
+          <span class="tag tag-gray">Problem Solving</span>
+          <span class="tag tag-gray">Spanish (Intermediate)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <p class="section-label">Projects</p>
+    <h2>Things I've built</h2>
+    <div class="projects-list">
+
+      <a class="project-card" href="#" target="_blank">
+        <div class="project-header">
+          <span class="project-title">Predictive Modeling System</span>
+          <span class="project-badge badge-winner">🏆 1st Place — Asset Hackathon</span>
+        </div>
+        <p class="project-desc">Built a custom interface model using Gaussian Process Regression to predict missing values in incomplete datasets. Designed a system that generalizes from existing data to improve prediction accuracy on sparse inputs — developed and presented as a working solution within a tight hackathon timeframe.</p>
+        <div class="project-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">Gaussian Process Regression</span>
+          <span class="project-tag">Predictive Modeling</span>
+          <span class="project-tag">Hackathon</span>
+        </div>
+        <span class="arrow">↗</span>
+      </a>
+
+      <a class="project-card" href="https://siennarosenberg.github.io/" target="_blank">
+        <div class="project-header">
+          <span class="project-title">Personal Portfolio Website</span>
+          <span class="project-badge badge-class">GitHub Pages</span>
+        </div>
+        <p class="project-desc">Designed and built this portfolio site from scratch using HTML and CSS, hosted on GitHub Pages. A hands-on introduction to web development and version control.</p>
+        <div class="project-tags">
+          <span class="project-tag">HTML</span>
+          <span class="project-tag">CSS</span>
+          <span class="project-tag">GitHub Pages</span>
+        </div>
+        <span class="arrow">↗</span>
+      </a>
+
+      <a class="project-card" href="https://github.com/siennarosenberg/CSCE145" target="_blank">
+        <div class="project-header">
+          <span class="project-title">Retail Swipe Tracker App</span>
+          <span class="project-badge badge-class">UX / Design</span>
+        </div>
+        <p class="project-desc">Identified a common problem among college students — losing track of dining swipes — and designed a solution through user research, affinity diagrams, and iterative sketching. Developed a full problem statement and proposed app interface.</p>
+        <div class="project-tags">
+          <span class="project-tag">UX Research</span>
+          <span class="project-tag">Affinity Mapping</span>
+          <span class="project-tag">Prototyping</span>
+        </div>
+        <span class="arrow">↗</span>
+      </a>
+
+      <a class="project-card" href="https://github.com/siennarosenberg/APCSP" target="_blank">
+        <div class="project-header">
+          <span class="project-title">AP CSP Create Task</span>
+          <span class="project-badge badge-class">JavaScript</span>
+        </div>
+        <p class="project-desc">Created an interactive JavaScript application using Code.org's App Lab for the AP Computer Science Principles Create Task. An early project that sparked my interest in software development.</p>
+        <div class="project-tags">
+          <span class="project-tag">JavaScript</span>
+          <span class="project-tag">Code.org</span>
+          <span class="project-tag">App Lab</span>
+        </div>
+        <span class="arrow">↗</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <p class="section-label">Experience</p>
+    <h2>Where I've been</h2>
+    <div class="exp-list">
+
+      <div class="exp-item">
+        <span class="exp-date">Aug 2024 – Aug 2025</span>
+        <div>
+          <p class="exp-role">Team Captain &amp; Instructor</p>
+          <p class="exp-org">Mathnasium · Midlothian, VA</p>
+          <p class="exp-desc">Tutored students ages 5–18 in mathematics, adapting teaching styles to individual learning needs. Led the instructing team, trained new staff, and maintained student-to-instructor ratios.</p>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <span class="exp-date">Dec 2025 – Jan 2026</span>
+        <div>
+          <p class="exp-role">Customer Service Associate</p>
+          <p class="exp-org">Walgreens · Midlothian, VA</p>
+          <p class="exp-desc">Assisted customers, managed register operations, fulfilled pickup and shipping orders, and supported day-to-day store operations.</p>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <span class="exp-date">Aug 2023 – May 2025</span>
+        <div>
+          <p class="exp-role">President</p>
+          <p class="exp-org">Earth Club · Midlothian High School</p>
+          <p class="exp-desc">Led club meetings, planned initiatives, and developed ways to promote environmental awareness within the school community.</p>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <span class="exp-date">Dec 2023 – Present</span>
+        <div>
+          <p class="exp-role">Volunteer</p>
+          <p class="exp-org">Chesterfield Food Bank</p>
+          <p class="exp-desc">Monthly volunteer — distributes food, manages inventory, loads cars, and regularly has the opportunity to assist Spanish-speaking families.</p>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <span class="exp-date">Mar 2023 – Present</span>
+        <div>
+          <p class="exp-role">Volunteer</p>
+          <p class="exp-org">Richmond SPCA</p>
+          <p class="exp-desc">Supports animal welfare operations, handles a variety of shelter tasks, and helps maintain a clean and organized environment for animals.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <p class="section-label">Contact</p>
+    <h2>Let's connect</h2>
+    <p style="color: var(--muted); max-width: 480px;">I'm always open to new opportunities, collaborations, or just a conversation. Feel free to reach out!</p>
+    <div class="contact-row">
+      <a class="contact-link" href="mailto:siennarosenberg72@gmail.com">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        siennarosenberg72@gmail.com
+      </a>
+      <a class="contact-link" href="https://linkedin.com/in/siennarosenberg" target="_blank">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+      <a class="contact-link" href="https://github.com/siennarosenberg" target="_blank">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        GitHub
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Sienna Rosenberg · Built with HTML &amp; CSS &amp; Claude
+  </footer>
+
+</body>
 </html>
-<footer>Content created with help from ChatGPT</footer>
